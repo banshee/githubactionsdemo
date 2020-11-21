@@ -12,3 +12,4 @@ jobs:
       - run: cat /proc/cpuinfo
       - run: pwd
       - run: find .
+      - run: env | sort
