@@ -15,4 +15,4 @@ jobs:
       - run: env | sort
       - run: touch firstfile
       - run: ls
-      - run: sudo apt-get update && apt-get install yq jq
+      - run: sudo apt-get update && sudo apt-get install -y yq jq
