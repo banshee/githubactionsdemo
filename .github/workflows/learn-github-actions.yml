@@ -11,4 +11,4 @@ jobs:
       - run: uname -a
       - run: cat /proc/cpuinfo
       - run: pwd
-      - run: ls -R
+      - run: find .
