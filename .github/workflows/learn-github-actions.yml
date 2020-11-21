@@ -15,4 +15,6 @@ jobs:
       - run: env | sort
       - run: touch firstfile
       - run: ls
-      - run: sudo apt-get update && sudo apt-get install -y yq jq
+      - run: sudo apt-get update && sudo apt-get install -y snap
+      - run: sudo apt-get update && sudo apt-get install -y jq
+      - run: snap install yq
