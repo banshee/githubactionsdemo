@@ -10,3 +10,5 @@ jobs:
       - run: bats -v
       - run: uname -a
       - run: cat /proc/cpuinfo
+      - run: pwd
+      - run: ls -R
