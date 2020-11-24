@@ -8,14 +8,7 @@ jobs:
       - run: sudo rm /usr/bin/go
       - run: wget -O /tmp/go.tar.gz https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
       - run: sudo tar -C /usr/local -xzf /tmp/go.tar.gz
-      - run: echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.bashrc
-      - run: echo 'echo in bashrc' >> $HOME/.bashrc
-      - run: export FOO=bar
-      - run: echo should be foo $FOO stuff
-      - run: uname -a
-      - run: cat /proc/cpuinfo
-      - run: pwd
-      - run: find .
+      - run: echo "PATH=$PATH:/usr/local/go/bin" >> $GITHUB_PATH
       - run: env | sort
       - run: which go
       - run: go version
