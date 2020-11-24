@@ -18,5 +18,6 @@ jobs:
       - run: env | sort
       - run: which go
       - run: go version
-      - run: echo "PATH=$PATH:/more/path" >> $GITHUB_ENV
+      - run: echo "PATH=$PATH:/more/path/env" >> $GITHUB_ENV
+      - run: echo "PATH=$PATH:/more/path/path" >> $GITHUB_PATH
       - run: env | sort
