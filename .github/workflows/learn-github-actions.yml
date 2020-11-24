@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - run: export FOO=bar
-      - run: echo $FOO
+      - run: echo should be foo $FOO stuff
       - run: uname -a
       - run: cat /proc/cpuinfo
       - run: pwd
