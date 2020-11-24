@@ -16,5 +16,3 @@ jobs:
       - run: pwd
       - run: find .
       - run: env | sort
-
-tar -C /usr/local -xzf go1.15.5.linux-amd64.tar.gz
