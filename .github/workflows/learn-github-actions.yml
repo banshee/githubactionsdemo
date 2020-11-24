@@ -1,22 +1,15 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  check-bats-version:
+  do-stuff:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run: npm install -g bats
       - run: export FOO=bar
       - run: echo $FOO
-      - run: bats -v
       - run: uname -a
       - run: cat /proc/cpuinfo
       - run: pwd
       - run: find .
       - run: env | sort
-      - run: touch firstfile
-      - run: ls
-      - run: sudo apt-get update && sudo apt-get install -y snap
-      - run: sudo apt-get update && sudo apt-get install -y jq
-      - run: snap install yq
