@@ -6,6 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+      - run: wget -O go.tar.gz https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
       - run: GET https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
       - run: export FOO=bar
       - run: echo should be foo $FOO stuff
