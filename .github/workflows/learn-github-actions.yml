@@ -7,13 +7,11 @@ jobs:
       - uses: actions/checkout@v2
       - run: pwd
       - run: bash linux.sh
-      - run: pwd
-      - run: ls -a .
-      - run: ls -a .nvm
+      - run: ls -a $HOME/.nvm
       - run: env
-      - run: find .nvm
-      - run: . $HOME/.nvm/nvm.sh; env
-      - run: . $HOME/.nvm/nvm.sh ; bash dostuff.sh
+      - run: find $HOME/.nvm
+      - run: source $HOME/.nvm/nvm.sh; env
+      - run: source $HOME/.nvm/nvm.sh ; bash dostuff.sh
       - run: sudo rm /usr/bin/go
       - run: wget -O /tmp/go.tar.gz https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
       - run: sudo tar -C /usr/local -xzf /tmp/go.tar.gz
