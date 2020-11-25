@@ -5,7 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: pwd
       - run: bash linux.sh
+      - run: pwd
+      - run: ls -a .
+      - run: ls -a .nvm
       - run: env
       - run: find .nvm
       - run: . $HOME/.nvm/nvm.sh; env
