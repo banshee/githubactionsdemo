@@ -6,7 +6,6 @@ sudo apt-get install -y nodejs
 
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
-export PATH=~/.npm-global/bin:$PATH
 
 # npm install of these succeeds, but then returns 1 as its exit value.  Just
 # assume it worked; if it didn't, everything will die immediately
