@@ -8,6 +8,9 @@ jobs:
       - run: bash addenvtobashrc.sh
       - run: env | sort
         shell: bash -l {0}
+        name: withbashl
+      - run: env | sort
+        name: withoutbashl
       - run: pwd
       - run: ls -Rl $HOME/.config
       - run: echo "$HOME/.npm-global/bin:$PATH" >> $GITHUB_PATH
