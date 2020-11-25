@@ -1,3 +1,4 @@
+echo 'export AAA=$HOME/go' >> ~/.bashrc
 echo 'export GOPATH=$HOME/go' >> ~/.bashrc
 echo 'export GOBIN=$GOPATH/bin' >> ~/.bashrc
 echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
