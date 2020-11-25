@@ -10,8 +10,10 @@ jobs:
       - run: ls -a $HOME/.nvm
       - run: env
       - run: find $HOME/.nvm
-      - run: source $HOME/.nvm/nvm.sh; env
-      - run: source $HOME/.nvm/nvm.sh ; bash dostuff.sh
+      - run: cat $HOME/.bashrc
+      - name: dostuff
+        shell: bash -l {0}
+        run: bash dostuff.sh
       - run: sudo rm /usr/bin/go
       - run: wget -O /tmp/go.tar.gz https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
       - run: sudo tar -C /usr/local -xzf /tmp/go.tar.gz
