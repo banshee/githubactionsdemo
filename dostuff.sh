@@ -1,3 +1,3 @@
 env | sort
 which truffle
-truffle deploy
+truffle unbox metacoin
