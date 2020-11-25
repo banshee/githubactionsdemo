@@ -1,5 +1,9 @@
 set -e
 
+export NVM_DIR=~/.nvm
+source ~/.nvm/nvm.sh
+cat ~/.nvm/nvm.sh
+
 nvm install 14.15.1
 
 # npm install of these succeeds, but then returns 1 as its exit value.  Just
