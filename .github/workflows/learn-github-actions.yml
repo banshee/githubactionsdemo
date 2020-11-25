@@ -6,8 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: bash linux.sh
-      - run: find .
-      - run: $HOME/.nvm/nvm.sh
+      - run: env
+      - run: find .nvm
+      - run: . $HOME/.nvm/nvm.sh; env
       - run: . $HOME/.nvm/nvm.sh ; bash dostuff.sh
       - run: sudo rm /usr/bin/go
       - run: wget -O /tmp/go.tar.gz https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
