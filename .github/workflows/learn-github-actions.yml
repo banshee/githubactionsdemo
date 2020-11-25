@@ -5,13 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: bash addenvtobashrc.sh
+      - run: env
+        shell: bash -l {0}
       - run: pwd
       - run: ls -Rl $HOME/.config
       - run: echo "$HOME/.npm-global/bin:$PATH" >> $GITHUB_PATH
       - run: bash linux.sh
-      - run: bash addenvtobashrc.sh
-      - run: env
-        shell: bash -l {0}
       - run: cat $HOME/.bashrc
       - name: dostuff
         shell: bash -l {0}
