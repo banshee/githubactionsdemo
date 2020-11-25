@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: pwd
-      - run: ls -R $HOME/.config
+      - run: ls -Rl $HOME/.config
       - run: echo "$HOME/.npm-global/bin:$PATH" >> $GITHUB_PATH
       - run: bash linux.sh
       - run: env
