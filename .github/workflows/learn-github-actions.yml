@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: export TST1=tst ; bash tst.sh
       - run: sudo rm /usr/bin/go
       - run: wget -O /tmp/go.tar.gz https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
       - run: sudo tar -C /usr/local -xzf /tmp/go.tar.gz
