@@ -9,9 +9,9 @@ jobs:
       - run: wget -O /tmp/go.tar.gz https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
       - run: sudo tar -C /usr/local -xzf /tmp/go.tar.gz
       - run: env | sort
-      - run: echo "GOPATH=/home/runner/go" >> $GITHUB_PATH
-      - run: echo "GOROOT=/usr/local/go" >> $GITHUB_PATH
-      - run: echo "PATH=$PATH:/usr/local/go/bin" >> $GITHUB_PATH
+      - run: echo "GOPATH=/home/runner/go" >> $GITHUB_ENV
+      - run: echo "GOROOT=/usr/local/go" >> $GITHUB_ENV
+      - run: echo "$PATH:/usr/local/go/bin" >> $GITHUB_PATH
       - run: env | sort
       - run: which go
       - run: go version
