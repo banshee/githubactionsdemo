@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: bash addenvtobashrc.sh
-      - run: env
+      - run: env | sort
         shell: bash -l {0}
       - run: pwd
       - run: ls -Rl $HOME/.config
