@@ -8,7 +8,7 @@ jobs:
       - run: |
           bash addenvtobashrc.sh
           env
-          source .bash_profile
+          source ~/.bash_profile
           echo updated
           env
       - run: env | sort
