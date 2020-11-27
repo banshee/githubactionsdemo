@@ -7,7 +7,10 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           bash addenvtobashrc.sh
-          ls
+          env
+          source .bash_profile
+          echo updated
+          env
       - run: env | sort
         shell: bash -l {0}
         name: withbashl
