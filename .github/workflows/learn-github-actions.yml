@@ -5,31 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: bash addenvtobashrc.sh
-             ls
+      - run: |
+          bash addenvtobashrc.sh
+          ls
       - run: env | sort
         shell: bash -l {0}
         name: withbashl
-      - run: env | sort
-        name: withoutbashl
-      - run: pwd
-      - run: ls -Rl $HOME/.config
-      - run: echo "$HOME/.npm-global/bin:$PATH" >> $GITHUB_PATH
-      - run: bash linux.sh
-      - run: cat $HOME/.bashrc
-      - name: dostuff
-        shell: bash -l {0}
-        run: bash dostuff.sh
-      - run: sudo rm /usr/bin/go
-      - run: wget -O /tmp/go.tar.gz https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
-      - run: sudo tar -C /usr/local -xzf /tmp/go.tar.gz
-      - run: env | sort
-      - run: echo "GOPATH=/home/runner/go" >> $GITHUB_ENV
-      - run: echo "GOROOT=/usr/local/go" >> $GITHUB_ENV
-      - run: echo "$PATH:/usr/local/go/bin" >> $GITHUB_PATH
-      - run: env | sort
-      - run: which go
-      - run: go version
-      - run: echo "PATH=$PATH:/more/path/env" >> $GITHUB_ENV
-      - run: echo "PATH=$PATH:/more/path/path" >> $GITHUB_PATH
-      - run: env | sort
