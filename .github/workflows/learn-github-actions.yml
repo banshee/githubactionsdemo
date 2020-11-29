@@ -8,7 +8,9 @@ jobs:
       - run: echo github.repository is ${{ github.repository }}
       - uses: actions/checkout@v2
         with: 
-          repo: banshee/githubactionsdemo
+          repository: banshee/githubactionsdemo
+          path: other
       - run: |
          ls
+         echo =====
          env
