@@ -6,11 +6,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo github.repository is ${{ github.repository }}
-      - uses: actions/checkout@v2
+      - name: checkout abhar
+        uses: actions/checkout@v2
         with: 
           repository: banshee/githubactionsdemo
           path: other
       - run: |
-         ls
+         ls 
+         echo =====
+         ls other
          echo =====
          env
