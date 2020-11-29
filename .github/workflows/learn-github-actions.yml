@@ -12,6 +12,8 @@ jobs:
           repository: banshee/githubactionsdemo
           path: other
       - run: |
+         echo github secret is ${{ secrets.GITHUB_TOKEN }}'
+         echo =====
          ls 
          echo =====
          ls other
