@@ -5,12 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with: 
+          repo: banshee/githubactionsdemo
       - run: |
-          bash addenvtobashrc.sh
-          env
-          source ~/.bash_profile
-          echo updated
-          env
-      - run: env | sort
-        shell: bash -l {0}
-        name: withbashl
+         ls
+         env
