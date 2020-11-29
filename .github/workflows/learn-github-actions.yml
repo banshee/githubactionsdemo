@@ -6,16 +6,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo github.repository is ${{ github.repository }}
-      - name: checkout abhar
-        uses: actions/checkout@v2
-        with: 
-          repository: banshee/githubactionsdemo
-          path: other
       - run: |
          echo github secret is ${{ secrets.GITHUB_TOKEN }}'
          echo =====
-         ls 
-         echo =====
-         ls other
-         echo =====
          env
+      - run: |
+          date > updatedFile.txt
+          git commit -m "new date" .
+          git push
